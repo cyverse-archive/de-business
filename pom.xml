@@ -1,0 +1,63 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.iplantc.core</groupId>
+    <artifactId>iplant-business</artifactId>
+    <version>dev-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>iPlant Business Layer Services</name>
+
+    <parent>
+        <groupId>org.iplantc.core</groupId>
+        <artifactId>base-pom</artifactId>
+        <version>dev-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <mule.version>2.2.1</mule.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.iplantc.core</groupId>
+            <artifactId>metadactyl</artifactId>
+            <version>dev-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.iplantc.core</groupId>
+            <artifactId>hibernatetoolkit</artifactId>
+            <version>dev-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-module-client</artifactId>
+            <version>${mule.version}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>mule-deps</id>
+            <name>Mule Dependencies</name>
+            <url>http://dist.codehaus.org/mule/dependencies/maven2</url>
+        </repository>
+        <repository>
+            <id>muleforge</id>
+            <url>http://repository.muleforge.org</url>
+        </repository>
+        <repository>
+            <id>iplantCollaborative</id>
+            <name>iPlant Collaborative local repository</name>
+            <url>http://projects.iplantcollaborative.org/archiva/repository/internal/
+            </url>
+        </repository>
+    </repositories>
+</project>
